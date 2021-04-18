@@ -1,60 +1,45 @@
 import org.junit.jupiter.api.Test;
+import com.codeborne.selenide.Configuration;
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selenide.*;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+public class TestEgarGlobal {
 
-public class TestEgarGlobal  {
+
     @Test
-    void some1Test() {
-        assertTrue(true);
+    void StartNow() {
+        Configuration.timeout = 6000;
+        open("https://www.egarglobal.com");
+        // $(byText("Learn More")).click();
+        $("h1").shouldHave(text("The NoCode platform for next-generation applications"));
+        $(".webBtn", 3).click();
+        $("h1").shouldHave(text("Contact an Expert"));
     }
 
     @Test
-    void some2Test() {
-        assertTrue(true);
+    void SpeakToUs() {
+        open("https://www.egarglobal.com");
+        // $(byText("Learn More")).click();
+        $("h1").shouldHave(text("The NoCode platform for next-generation applications"));
+        $(".webBtn", 2).click();
+        $("h1").shouldHave(text("Contact an Expert"));
     }
 
     @Test
-    void some3Test() {
-        assertTrue(true);
+    void LearnMoreAboutEGARGlobal() {
+        open("https://www.egarglobal.com");
+        // $(byText("Learn More")).click();
+        $("h1").scrollTo().shouldHave(text("The NoCode platform for next-generation applications"));
+        $(".webBtn", 1).click();
+        $("h1").shouldHave(text("Enterprise Financial Services Software Meets"));
     }
 
     @Test
-    void some4Test() {
-        assertTrue(true);
-    }
-
-    @Test
-    void some5Test() {
-        assertTrue(true);
-    }
-
-    @Test
-    void some6Test() {
-        assertTrue(true);
-    }
-
-    @Test
-    void some7Test() {
-        assertTrue(true);
-    }
-
-    @Test
-    void some8Test() {
-        assertTrue(true);
-    }
-
-    @Test
-    void some9Test() {
-        assertTrue(true);
-    }
-
-    @Test
-    void some10Test() {
-        assertTrue(true);
-    }
-
-    @Test
-    void some11Test() {
-        assertTrue(true);
+    void LearnMore() {
+        open("https://www.egarglobal.com");
+        // $(byText("Learn More")).click();
+        $("h1").shouldHave(text("The NoCode platform for next-generation applications"));
+        $(".webBtn", 0).click();
+        $("h1").shouldHave(text(" Build Apps. Modify Systems."));
     }
 }
