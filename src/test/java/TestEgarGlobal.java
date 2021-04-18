@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TestEgarGlobal {
 
-    public class PositiveTests {
+
         @Test
         void some1Test() {
             assertTrue(true);
