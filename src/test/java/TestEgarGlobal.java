@@ -1,3 +1,4 @@
+import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -7,7 +8,7 @@ public class TestEgarGlobal {
 
     @Test
     void StartNow() {
-        //Configuration.timeout=6000;
+        Configuration.timeout=30000;
         open("https://www.egarglobal.com");
         // $(byText("Learn More")).click();
         $("h1").shouldHave(text("The NoCode platform for next-generation applications"));
@@ -24,14 +25,14 @@ public class TestEgarGlobal {
         $("h1").shouldHave(text("Contact an Expert"));
     }
 
-    @Test
+    /*@Test
     void LearnMoreAboutEGARGlobal () {
         open("https://www.egarglobal.com");
         // $(byText("Learn More")).click();
         $("h1").shouldHave(text("The NoCode platform for next-generation applications"));
         $(".webBtn",1).click();
         $("h1").shouldHave(text("Enterprise Financial Services Software Meets"));
-    }
+    }*/
     @Test
     void LearnMore() {
         open("https://www.egarglobal.com");
